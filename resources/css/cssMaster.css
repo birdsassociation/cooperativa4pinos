@@ -64,7 +64,7 @@ table.dataTable thead .sorting_desc_disabled:before {
   
   /* Active/current link */
   .sidebar a.active {
-    background-color: #4CAF50;
+    background-color: #7E9D2F;
     color: white;
   }
   

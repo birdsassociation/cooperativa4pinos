@@ -6,13 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Ejemplo maquetado</title>
+        <!--
+     
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-    <!-- Google Fonts Roboto -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
- 
-        <link rel="stylesheet" href="../resources/css/bootstrap.min.css">         
-        <link rel="stylesheet" href="../resources/css/mdb.min.css"/>    
+        <link rel="stylesheet" href="../resources/css/bootstrap.css">
+        <link rel="stylesheet" href="../resources/css/mdb.css" />
+          
         <link rel="stylesheet" href="../resources/css/addons/datatables.min.css" >
+        <link rel="stylesheet" href="../resources/css/bootstrap-datetimepicker.min.css" >
         <link rel="stylesheet" href="../resources/css/cssMaster.css"/>
    
     </head>
@@ -24,13 +26,15 @@
             <script type="text/javascript" src="../resources/js/mdb.min.js"></script> 
             <!--<script type="text/javascript" src="../resources/js/style.js"></script>    -->
             <script type="text/javascript" src="../resources/js/addons/datatables.min.js"></script>     
+            <script type="text/javascript" src="../resources/js/bootstrap-datetimepicker.js"></script>    
+            <script type="text/javascript" src="../resources/js/bootstrap-datetimepicker.es.js"></script>    
             <script type="text/javascript" src="../resources/js/style.js">                
             </script>
             <div class="sidebar">
                     <a class="active" href="#home">Cooperativa <br/> 4 Pinos</a>
-                    <a href="#news">Administración</a>
-                    <a href="#contact">Gestiones</a>
-                    <a href="#about">Reportes</a>
+                    <a href="#Administracion">Administración</a>
+                    <a href="#Gestiones">Gestiones</a>
+                    <a href="#Reportes">Reportes</a>
             </div>                        
             <div class="content">
                 <div class="container">
@@ -38,8 +42,7 @@
                             <div class="overlay"></div>
                             <div class="container">
                                 <h3>Mantenimiento Afiliado</h3>                              
-                            </div>
-                                        
+                            </div>                                        
                     </div>
                     <div class="row">
                             <div class="col-sm-4">
@@ -63,6 +66,7 @@
                                             </th>
                                             <th class="th-sm">NIT
                                             </th>
+                                            <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -73,6 +77,15 @@
                                             <td>1111-12345-7777</td>
                                             <td>2011/04/25</td>
                                             <td>123345678-9</td>
+                                            <td>
+                                                <button type="button" class="btn btn-secondary btn-sm m-0 waves-effect"                                                        >
+                                                    <i class="fas fa-edit"></i> Modificar
+                                                </button>
+                                                <button type="button" class="btn btn-warning btn-sm m-0 waves-effect"                                                        >
+                                                    <i class="fas fa-minus-circle"></i> Eliminar
+                                                </button>
+                
+                                            </td>
                                             </tr>
                                             <tr>
                                             <td>8002</td>
@@ -81,7 +94,17 @@
                                             <td>1111-12345-7777</td>
                                             <td>2011/04/25</td>
                                             <td>123345678-9</td>
-                                            </tr>
+                                            <td>
+                                                    <button type="button" class="btn btn-secondary btn-sm m-0 waves-effect"                                                        >
+                                                        <i class="fas fa-edit"></i> Modificar
+                                                    </button>
+                                                    <button type="button" class="btn btn-warning btn-sm m-0 waves-effect"                                                        >
+                                                        <i class="fas fa-minus-circle"></i> Eliminar
+                                                    </button>
+                    
+                                                </td>
+                                                
+                                        </tr>
                                             <tr>
                                             <td>8003</td>
                                             <td>Afiliado 3</td>
@@ -89,16 +112,28 @@
                                             <td>1111-12345-7777</td>
                                             <td>2011/04/25</td>
                                             <td>123345678-9</td>
-                                            </tr>
+                                            <td>
+                                                    <button type="button" class="btn btn-secondary btn-sm m-0 waves-effect" data-toggle="modal" data-target="#modalArriba">
+                                                        <i class="fas fa-edit"></i> Modificar
+                                                    </button>
+                                                    <button type="button" class="btn btn-warning btn-sm m-0 waves-effect" >
+                                                        <i class="fas fa-minus-circle"></i> Eliminar
+                                                    </button>
+                    
+                                                </td>
+                                                    
+                                        </tr>
                                             
                                         </tbody>
                                         <tfoot>
                                                 <tr>
-                                                    <th colspan="6">
-                                                        <button type="button" class="btn btn-outline-success btn-sm m-0 waves-effect">
+                                                    <th colspan="7">
+                                                        <button type="button" class="btn btn-primary btn-sm m-0 waves-effect"
+                                                        data-toggle="modal" data-target="#modalArriba">
                                                                 <i class="fas fa-plus-circle mr-1"></i> Nuevo
                                                         </button>
                                                     </th>
+                                                    
                                                     
                                                 </tr>
                                                 </tfoot>
@@ -108,7 +143,74 @@
                     </div>
                 </div>
             </div>
-             
+            <div class="modal fade top" id="modalArriba" tabindex="-1" role="dialog" 
+            aria-labelledby="myModalLabel"  aria-hidden="true">          
+            
+            <div class="modal-dialog modal-top" role="document">                  
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title w-100 text-center" id="myModalLabel">Nuevo Afiliado</h4>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body justify-content-center">
+                    <form class="needs-validation">
+                            <div class="form-group">
+                                <label for="txtCodigo">Código:</label>
+                                <input type="text" class="form-control" id="txtCodigo">
+                            </div>
+                            <div class="form-group">
+                                <label for="txtNombre">Nombre:</label>
+                                <input type="text" class="form-control" id="txtNombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="txtDireccion">Dirección:</label>
+                                <input type="text" class="form-control" id="txtDireccion">
+                            </div>
+                            <div class="form-group">
+                                <label for="txtNit">NIT:</label>
+                                <input type="text" class="form-control" id="txtNit">
+                            </div>
+                          
+                            <div class="form-group dtpicker input-append date ">
+                                    <label for="txtFechaIngreso">Fecha ingreso:</label>
+                                    <div class="input-group date " data-date="" data-date-format="dd MM yyyy" data-link-field="txtFechaIngreso" data-link-format="yyyy-mm-dd">
+                                            <input class="form-control" size="16" type="text" value="" id="txtFechaIngreso" >
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-remove"></span>
+                                            </span>
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-th"></span>
+                                            </span>
+                                    </div>
+                                    <input type="hidden" id="hdnFechaIngreso" value="" /><br/>
+                                    
+                            </div>
+                            <script type="text/javascript">
+                                $("#txtFechaIngreso").datetimepicker({
+                                    //format: "LT",
+                                    autoclose: true,
+                                    todayBtn: true,
+                                    pickerPosition: "bottom-left",
+                                    language: 'es'
+                                });
+                            </script>       
+                    </form>
+                        <!--<button type="button" style="background-color:#28a745" class="btn btn-success">Success</button>
+                        <button type="button" style="background-color:#7E9D2F" class="btn btn-primary">Primary</button>
+                        <button type="button" style="background-color:#7E2F9E" class="btn btn-secondary">Secondary</button>
+                        <button type="button" style="background-color:#3C0852" class="btn btn-info">Info</button>
+                        <button type="button" style="background-color:#3F5210" class="btn btn-warning">Warning</button>
+                        <button type="button"  class="btn btn-danger">Danger</button>-->
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                  <button type="button" class="btn btn-success">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>     
             
        
     </body>

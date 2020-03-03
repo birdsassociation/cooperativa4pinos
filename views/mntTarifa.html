@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Producto</title>
+    <title>Tarifa</title>
     <!--
      
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">-->
@@ -52,7 +52,7 @@
             <div class="jumbotron text-center bg-color bg-cover-jb">
                 <div class="overlay"></div>
                 <div class="container">
-                    <h3>Mantenimiento Producto</h3>
+                    <h3>Mantenimiento Tarifa</h3>
                 </div>
             </div>
             <div class="row">
@@ -69,7 +69,13 @@
                                 </th>
                                 <th class="th-sm">Descripción
                                 </th>
-                                <th class="th-sm">Precio
+                                <th class="th-sm">Tipo
+                                </th>
+                                <th class="th-sm">Tarifa
+                                </th>
+                                <th class="th-sm">Fecha inicio
+                                </th>
+                                <th class="th-sm">Fecha fin
                                 </th>
                                 <th class="th-sm">Estado
                                 </th>
@@ -78,18 +84,20 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td id="codigo">156894</td>
-                                <td id="nombre">Producto 1</td>
-                                <td id="precio">20.10</td>
+                                <td id="codigo">9849</td>
+                                <td id="descripcion">Tarifa 1</td>
+                                <td id="tipoTarifa">Impuesto</td>
+                                <td id="tarifa">ISR</td>
+                                <td id="fechaInicio">2020/02/25</td>
+                                <td id="fechaFin">2020/02/26</td>
                                 <td id="estado">Alta</td>
                                 <td>
-                                    <button type="button" id="vista"
-                                        class="btn btn-secondary my-2  m-0 waves-effect px-2 py-1 fa-2x rounded-lg"
-                                        data-toggle="modal" data-target="#modalVista">
+                                    <button type="button"
+                                        class="btn btn-secondary my-2  m-0 waves-effect px-2 py-1 fa-2x rounded-lg">
                                         <i class="fas fa-eye"></i>
                                     </button>
-                                    <button type="button" id="modificar"
-                                        class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                    <button type="button"
+                                        class="modificar btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
                                         data-toggle="modal" data-target="#modalArriba">
                                         <i class="fas fa-edit"></i>
                                     </button>
@@ -100,18 +108,20 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td id="codigo">598498897</td>
-                                <td id="nombre">Producto 2</td>
-                                <td id="precio">30.50</td>
+                                <td id="codigo">8824</td>
+                                <td id="descripcion">Tarifa 2</td>
+                                <td id="tipoTarifa">Descuento</td>
+                                <td id="tarifa">Mayoreo</td>
+                                <td id="fechaInicio">2020/02/26</td>
+                                <td id="fechaFin">2020/02/27</td>
                                 <td id="estado">Alta</td>
                                 <td>
-                                    <button type="button" id="vista"
-                                        class="btn btn-secondary my-2  m-0 waves-effect px-2 py-1 fa-2x rounded-lg"
-                                        data-toggle="modal" data-target="#modalVista">
+                                    <button type="button"
+                                        class="btn btn-secondary my-2  m-0 waves-effect px-2 py-1 fa-2x rounded-lg">
                                         <i class="fas fa-eye"></i>
                                     </button>
-                                    <button type="button" id="modificar"
-                                        class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                    <button type="button"
+                                        class="modificar btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
                                         data-toggle="modal" data-target="#modalArriba">
                                         <i class="fas fa-edit"></i>
                                     </button>
@@ -122,18 +132,20 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td id="codigo">749812</td>
-                                <td id="nombre">Producto 3</td>
-                                <td id="precio">50.70</td>
+                                <td id="codigo">859589</td>
+                                <td id="descripcion">Tarifa 3</td>
+                                <td id="tipoTarifa">Impuesto</td>
+                                <td id="tarifa">Retraso</td>
+                                <td id="fechaInicio">2020/02/28</td>
+                                <td id="fechaFin">2020/02/29</td>
                                 <td id="estado">Alta</td>
                                 <td>
-                                    <button type="button" id="vista"
-                                        class="btn btn-secondary my-2  m-0 waves-effect px-2 py-1 fa-2x rounded-lg"
-                                        data-toggle="modal" data-target="#modalVista">
+                                    <button type="button"
+                                        class="btn btn-secondary my-2  m-0 waves-effect px-2 py-1 fa-2x rounded-lg">
                                         <i class="fas fa-eye"></i>
                                     </button>
-                                    <button type="button" id="modificar"
-                                        class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                    <button type="button"
+                                        class="modificar btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
                                         data-toggle="modal" data-target="#modalArriba">
                                         <i class="fas fa-edit"></i>
                                     </button>
@@ -160,32 +172,63 @@
         <div class="modal-dialog modal-top" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Nuevo Producto</h4>
-                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal"
-                        aria-label="Cerrar">
+                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Nueva Tarifa</h4>
+                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal" aria-label="Cerrar">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body justify-content-center">
                     <form class="needs-validation">
-
-                        <div class="form-group">
-                            <label for="txtCodigo">Código:</label>
-                            <input type="text" class="form-control" id="txtCodigo">
-                        </div>
                         <div class="form-group">
                             <label for="txtDescripcion">Descripción:</label>
                             <input type="text" class="form-control" id="txtDescripcion">
                         </div>
-                        <div class="form-group">
-                            <label for="txtPrecio">Precio:</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                  <div class="input-group-text">Q</div>
-                                </div>
-                                <input type="text" class="form-control" id="txtPrecio">
-                              </div>                          
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="txtTarifa">Tarifa:</label>
+                                <input type="text" class="form-control" id="txtTarifa">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="txtTipoTarifa">Tipo tarifa:</label>
+                                <select type="text" class="form-control" id="txtTipoTarifa">
+                                    <option>Seleccionar...</option>
+                                    <option value="Impuesto">Impuesto</option>
+                                    <option value="Descuento">Descuento</option>
+                                </select>
+                            </div>
+
                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-6 dtpicker input-append date">
+                                <label for="txtFechaInicio">Fecha inicio:</label>
+                                <div class="input-group date" data-date="" data-date-format="yyyy mm dd"
+                                    data-link-field="txtFechaIngreso" data-link-format="yyyy-mm-dd">
+                                    <input class="form-control" size="16" type="text" value="" id="txtFechaInicio">
+                                    <span class="input-group-text input-group-addon" id="removeInicio">
+                                        <span class="add-on fas fa-times"></span>
+                                    </span>
+                                    <span class="input-group-text input-group-addon" id="showInicio">
+                                        <span class="add-on fas fa-calendar"></span>
+                                    </span>
+                                </div>
+                                <input type="hidden" id="hdnFechaInicio" value="" /><br />
+                            </div>
+                            <div class="form-group col-6 dtpicker input-append date">
+                                <label for="txtFechaFin">Fecha fin:</label>
+                                <div class="input-group date" data-date="" data-date-format="yyyy mm dd"
+                                    data-link-field="txtFechaIngreso" data-link-format="yyyy-mm-dd">
+                                    <input class="form-control" size="16" type="text" value="" id="txtFechaFin">
+                                    <span class="input-group-text input-group-addon" id="removeFin">
+                                        <span class="add-on fas fa-times"></span>
+                                    </span>
+                                    <span class="input-group-text input-group-addon" id="showFin">
+                                        <span class="add-on fas fa-calendar"></span>
+                                    </span>
+                                </div>
+                                <input type="hidden" id="hdnFechaFin" value="" /><br />
+                            </div>
+                        </div>
+
                     </form>
                     <!--<button type="button" style="background-color:#28a745" class="btn btn-success">Success</button>
                         <button type="button" style="background-color:#7E9D2F" class="btn btn-primary">Primary</button>
@@ -201,69 +244,51 @@
             </div>
         </div>
     </div>
-    <div class="modal fade top" id="modalVista" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-top modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Producto</h4>
-                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal"
-                        aria-label="Cerrar">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body justify-content-center">
-                    <div class="row">
-                        <div class="col-6">
-                            <h5>Detalle Producto</h6>
-                            <div class="row">
-                                <div class="col-4">
-                                    Código:
-                                </div>
-                                <div class="col-8" id="detCodigo"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    Descripción:
-                                </div>
-                                <div class="col-8" id="detDescripcion"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    Precio:
-                                </div>
-                                <div class="col-8" id="detPrecio"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    Estado:
-                                </div>
-                                <div class="col-8" id="detEstado"></div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <h5>Porcentaje de rechazo</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer justify-content-center">
-                    <button type="button" class="btn btn-danger cerrarModal" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <script type="text/javascript">
+        //datapicket
+        $("#txtFechaInicio").datetimepicker({
+            //format: "LT",
+            format: 'yyyy-mm-dd',
+            forceParse: true,
+            autoclose: true,
+            todayBtn: true,
+            pickerPosition: "bottom-left",
+            language: 'es',
+            startView: 4,
+            minView: 2
+        });
+        $("#showInicio").click(function () {
+            $('#txtFechaInicio').datetimepicker('show');
+        });
+        $("#removeInicio").click(function () {
+            $("#txtFechaInicio").val('');
+        });
+
+        $("#txtFechaFin").datetimepicker({
+            //format: "LT",
+            format: 'yyyy-mm-dd',
+            forceParse: true,
+            autoclose: true,
+            todayBtn: true,
+            pickerPosition: "bottom-left",
+            language: 'es',
+            startView: 4,
+            minView: 2
+        });
+        $("#showFin").click(function () {
+            $('#txtFechaFin').datetimepicker('show');
+        });
+        $("#removeFin").click(function () {
+            $("#txtFechaFin").val('');
+        });
+
         //modificar
-        $("#modificar").click(function () {
-            $("#txtCodigo").val($(this).parents("tr").find("td").eq(0).html());
+        $(".modificar").click(function () {
             $("#txtDescripcion").val($(this).parents("tr").find("td").eq(1).html());
-            $("#txtPrecio").val($(this).parents("tr").find("td").eq(2).html());
-        })
-        $("#vista").click(function () {
-            $("#detCodigo").text(($(this).parents("tr").find("td").eq(0).html()));
-            $("#detDescripcion").text(($(this).parents("tr").find("td").eq(1).html()));
-            $("#detPrecio").text(($(this).parents("tr").find("td").eq(2).html()));
-            $("#detEstado").text(($(this).parents("tr").find("td").eq(3).html()));
+            $("#txtTipoTarifa").val($(this).parents("tr").find("td").eq(2).html());
+            $("#txtTarifa").val($(this).parents("tr").find("td").eq(3).html());
+            $("#txtFechaInicio").val($(this).parents("tr").find("td").eq(4).html());
+            $("#txtFechaFin").val($(this).parents("tr").find("td").eq(5).html());  
         })
 
         //modal
@@ -281,9 +306,11 @@
 
         //funciones
         function limpiarCampos() {
-            $("#txtCodigo").val('');
             $("#txtDescripcion").val('');
-            $("#txtPrecio").val('');
+            $("#txtTipoTarifa").val('');
+            $("#txtTarifa").val('');
+            $("#txtFechaInicio").val('');
+            $("#txtFechaFin").val('');
         }
 
     </script>

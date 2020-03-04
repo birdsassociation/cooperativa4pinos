@@ -94,7 +94,8 @@
                                         <i class="fas fa-edit"></i>
                                     </button>
                                     <button type="button"
-                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                        data-toggle="modal" data-target="#modalEliminar">
                                         <i class="fas fa-minus-circle"></i>
                                     </button>
                                 </td>
@@ -116,7 +117,8 @@
                                         <i class="fas fa-edit"></i>
                                     </button>
                                     <button type="button"
-                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                        data-toggle="modal" data-target="#modalEliminar">
                                         <i class="fas fa-minus-circle"></i>
                                     </button>
                                 </td>
@@ -138,7 +140,8 @@
                                         <i class="fas fa-edit"></i>
                                     </button>
                                     <button type="button"
-                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                        data-toggle="modal" data-target="#modalEliminar">
                                         <i class="fas fa-minus-circle"></i>
                                     </button>
                                 </td>
@@ -181,10 +184,10 @@
                             <label for="txtPrecio">Precio:</label>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
-                                  <div class="input-group-text">Q</div>
+                                    <div class="input-group-text">Q</div>
                                 </div>
                                 <input type="text" class="form-control" id="txtPrecio">
-                              </div>                          
+                            </div>
                         </div>
                     </form>
                     <!--<button type="button" style="background-color:#28a745" class="btn btn-success">Success</button>
@@ -216,30 +219,30 @@
                     <div class="row">
                         <div class="col-6">
                             <h5>Detalle Producto</h6>
-                            <div class="row">
-                                <div class="col-4">
-                                    Código:
+                                <div class="row">
+                                    <div class="col-4">
+                                        Código:
+                                    </div>
+                                    <div class="col-8" id="detCodigo"></div>
                                 </div>
-                                <div class="col-8" id="detCodigo"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    Descripción:
+                                <div class="row">
+                                    <div class="col-4">
+                                        Descripción:
+                                    </div>
+                                    <div class="col-8" id="detDescripcion"></div>
                                 </div>
-                                <div class="col-8" id="detDescripcion"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    Precio:
+                                <div class="row">
+                                    <div class="col-4">
+                                        Precio:
+                                    </div>
+                                    <div class="col-8" id="detPrecio"></div>
                                 </div>
-                                <div class="col-8" id="detPrecio"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-4">
-                                    Estado:
+                                <div class="row">
+                                    <div class="col-4">
+                                        Estado:
+                                    </div>
+                                    <div class="col-8" id="detEstado"></div>
                                 </div>
-                                <div class="col-8" id="detEstado"></div>
-                            </div>
                         </div>
                         <div class="col-6">
                             <h5>Porcentaje de rechazo</h6>
@@ -248,6 +251,28 @@
                 </div>
                 <div class="modal-footer justify-content-center">
                     <button type="button" class="btn btn-danger cerrarModal" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade top" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-top" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Eliminar Producto</h4>
+                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body justify-content-center">
+                    Esta seguro que desea eliminar el registro?
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-danger cerrarModal" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="guardar">Aceptar</button>
                 </div>
             </div>
         </div>

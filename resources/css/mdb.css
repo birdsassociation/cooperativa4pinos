@@ -1552,7 +1552,7 @@ ul.stepper li.completed a .circle {
 }
 
 .info-color {
-    background-color: #33b5e5 !important
+    background-color: #3C0852 !important
 }
 
 .info-color-dark {
@@ -1854,7 +1854,7 @@ a:not([href]):not([tabindex]):hover {
 }
 
 .bg-primary {
-    background-color: #4285f4 !important
+    background-color: #7E9D2F !important
 }
 
 a.bg-primary:hover,
@@ -1865,7 +1865,7 @@ button.bg-primary:focus {
 }
 
 .border-primary {
-    border-color: #4285f4 !important
+    border-color: #7E9D2F !important
 }
 
 .bg-danger {
@@ -1914,7 +1914,7 @@ button.bg-success:focus {
 }
 
 .bg-info {
-    background-color: #33b5e5 !important
+    background-color: #3C0852 !important
 }
 
 a.bg-info:hover,
@@ -1925,7 +1925,7 @@ button.bg-info:focus {
 }
 
 .border-info {
-    border-color: #33b5e5 !important
+    border-color: #3C0852 !important
 }
 
 .bg-default {
@@ -2076,7 +2076,7 @@ h6 {
 }
 
 .bq-info {
-    border-left: 3px solid #33b5e5 !important
+    border-left: 3px solid #3C0852 !important
 }
 
 .bq-info .bq-title {
@@ -2228,7 +2228,7 @@ a.text-success:focus {
 }
 
 .text-info {
-    color: #33b5e5 !important
+    color: #3C0852 !important
 }
 
 a.text-info:hover,
@@ -10134,7 +10134,7 @@ table.table a.btn.btn-black {
 
 .badge-info {
     color: #fff !important;
-    background-color: #33b5e5 !important
+    background-color: #3C0852 !important
 }
 
 .badge-default {
@@ -10404,17 +10404,17 @@ body.scrollable {
 }
 
 .modal-dialog.modal-notify.modal-info .modal-header {
-    background-color: #33b5e5
+    background-color: #3C0852
 }
 
 .modal-dialog.modal-notify.modal-info .fas,
 .modal-dialog.modal-notify.modal-info .fab,
 .modal-dialog.modal-notify.modal-info .far {
-    color: #33b5e5
+    color: #3C0852
 }
 
 .modal-dialog.modal-notify.modal-info .badge {
-    background-color: #33b5e5
+    background-color: #3C0852
 }
 
 .modal-dialog.modal-notify.modal-info .btn .fas,
@@ -10426,7 +10426,7 @@ body.scrollable {
 .modal-dialog.modal-notify.modal-info .btn.btn-outline-info .fas,
 .modal-dialog.modal-notify.modal-info .btn.btn-outline-info .fab,
 .modal-dialog.modal-notify.modal-info .btn.btn-outline-info .far {
-    color: #33b5e5
+    color: #3C0852
 }
 
 .modal {
@@ -12064,7 +12064,7 @@ body.scrollable {
 }
 
 .note-info {
-    background-color: #e4f2f5;
+    background-color: #3C0852;
     border-color: #2492a5
 }
 

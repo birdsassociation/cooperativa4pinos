@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Asignar Tarifa</title>
+    <!--
+     
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap.css">
+    <link rel="stylesheet" href="../resources/css/mdb.css" />
+
+    <link rel="stylesheet" href="../resources/css/addons/datatables.min.css">
+    <link rel="stylesheet" href="../resources/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../resources/css/cssMaster.css" />
+    <link rel="stylesheet" href="../resources/css/style.css" />
+
+</head>
+
+<body>
+    <script type="text/javascript" src="../resources/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../resources/js/popper.min.js"></script>
+    <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../resources/js/mdb.min.js"></script>
+    <!--<script type="text/javascript" src="../resources/js/style.js"></script>    -->
+    <script type="text/javascript" src="../resources/js/addons/datatables.min.js"></script>
+    <script type="text/javascript" src="../resources/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="../resources/js/bootstrap-datetimepicker.es.js"></script>
+    <script type="text/javascript" src="../resources/js/style.js"></script>
+    <script type="text/javascript" src="../resources/js/jsAsignarTarifa.js"></script>
+    
+    <div class="sidebar">
+        <a class="active" href="#home">
+            <div class="row align-items-center">
+                <div class="col-4  mr-0 align-items-center">
+                    <img class="logo my-2" src="../resources/img/logo.png" alt="logo-cooperativa4pinos">
+                </div>
+                <div class="col-8 align-items-center align-self-center">
+                    Cooperativa <br /> 4 Pinos
+                </div>
+            </div>
+        </a>
+        <a href="#Administracion">Administración</a>
+        <a href="#Gestiones">Gestiones</a>
+        <a href="#Reportes">Reportes</a>
+    </div>
+    <div class="content">
+        <div class="container px-0">
+            <div class="jumbotron text-center bg-color bg-cover-jb">
+                <div class="overlay"></div>
+                <div class="container">
+                    <h3>Asignar Tarifa</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                </div>
+            </div>
+            <div class="row w-100">
+                <div class="col-sm-4 text-center   ">
+                    <div class="row w-90">
+                        <div class="col-sm-12 border-bottom border-primary w-90">
+                                Comunidades                   
+                                
+                        </div>
+                        <div class="col-sm-12 p-3">
+                                <table id="tblComunidades" class="table table-responsive table-striped table-bordered table-sm" cellspacing="0"
+                                width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="th-sm w-40" style="width:40%;" >Código
+                                        </th>
+                                        <th class="th-sm w-40" style="width:50%;"> Descripción
+                                        </th>
+                                        <th class="th-sm w-20" style="width:10%;">
+                                        </th>
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody>                                   
+                                    <tr>
+                                        <td>1001</td>
+                                        <td>Comunidad 1</td>
+                                        <td>
+                                                <button type="button"  data-toggle="modal" data-target="#modalComunidad"
+                                                class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                                <i class="fas fa-dollar-sign"></i>
+                                                </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1002</td>
+                                        <td>Comunidad 2</td>
+                                        <td>
+                                                <button type="button"  data-toggle="modal" data-target="#modalComunidad"
+                                                class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                                <i class="fas fa-dollar-sign"></i>
+                                                </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1003</td>
+                                        <td>Comunidad 3 </td>
+                                        <td>
+                                                <button type="button"  data-toggle="modal" data-target="#modalComunidad"
+                                                class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                                <i class="fas fa-dollar-sign"></i>
+                                                </button>
+                                        </td>
+                                    </tr>
+        
+                                </tbody>
+                                <tfoot>
+                                </tfoot>
+        
+                            </table>
+
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="col-sm-4 text-center  ">
+                    <div class="row w-90">
+                        <div class="col-sm-12  border-bottom border-secondary w-90">
+                                Productos                               
+                        </div>
+                        <div class="col-sm-12 p-3">
+                            <table id="tblProductos" class="table table-responsive table-striped table-bordered table-sm " >
+                                <thead>
+                                    <tr>
+                                        <th class="th-sm w-40" style="width:40%;">Código
+                                        </th>
+                                        <th class="th-sm w-40" style="width:40%;">Descripción
+                                        </th>
+                                        <th  class="th-sm w-20" style="width:20%;">
+                                        </th>                                        
+                                    </tr>
+                                </thead>
+                                <tbody>                                   
+                                    <tr>
+                                        <td>E01</td>
+                                        <td>Ejotes </td>
+                                        <td>
+                                                <button type="button"  data-toggle="modal" data-target="#modalProducto"
+                                                class="btn btn-secondary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                                <i class="fas fa-dollar-sign"></i>
+                                                </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Z02</td>
+                                        <td>Zanahoria Amarilla</td>
+                                        <td>
+                                                <button type="button"  data-toggle="modal" data-target="#modalProducto"
+                                                class="btn btn-secondary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                                <i class="fas fa-dollar-sign"></i>
+                                                </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Z02</td>
+                                        <td>Zanahoria Blanca</td>
+                                        <td>
+                                                <button type="button"  data-toggle="modal" data-target="#modalProducto"
+                                                class="btn btn-secondary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                                <i class="fas fa-dollar-sign"></i>
+                                                </button>
+                                        </td>
+                                    </tr>        
+                                </tbody>
+                                <tfoot>
+                                </tfoot>
+        
+                            </table>
+
+                        </div>
+                    </div>
+                    
+                </button>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <div class="row w-90">
+                        <div class="col-sm-12 border-bottom border-info w-90">
+                                Tipo Afiliado 
+                                
+                        </div>
+                        <div class="col-sm-12 p-3">
+                            <table id="tblTipoAfiliado" class="table table-responsive table-striped table-bordered table-sm" cellspacing="0"
+                            width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="th-sm" style="width:40%;">Código
+                                        </th>
+                                        <th class="th-sm" style="width:40%;">Descripción
+                                        </th>
+                                        <th class="th-sm" style="width:20%;">
+                                        </th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>                                   
+                                    <tr>
+                                        <td>ASOCIADO</td>
+                                        <td>Asociados a la Cooperativa </td>
+                                        <td>
+                                                <button type="button"  data-toggle="modal" data-target="#modalTipoAfiliado"
+                                                class="btn btn-info m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                                <i class="fas fa-dollar-sign"></i>
+                                                </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>PROVEEDOR</td>
+                                        <td>Proveedor de la cooperativa</td>
+                                        <td>
+                                                <button type="button"  data-toggle="modal" data-target="#modalTipoAfiliado"
+                                                class="btn btn-info m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                                <i class="fas fa-dollar-sign"></i>
+                                                </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>FINCA</td>
+                                        <td>Fincas afiliadas a la cooperativa</td>
+                                        <td>
+                                                <button type="button"  data-toggle="modal" data-target="#modalTipoAfiliado"
+                                                class="btn btn-info m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                                <i class="fas fa-dollar-sign"></i>
+                                                </button>
+                                        </td>
+                                    </tr>        
+                                </tbody>
+                                <tfoot>
+                                </tfoot>        
+                            </table>
+                        </div>
+                    </div>
+                    
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade top" id="modalComunidad" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-top" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Tarifa Comunidad</h4>
+                    <button type="button" class="close" id="cerrarModal" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body justify-content-center">
+                    <form class="needs-validation">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="cmbTarifaComunidad">Tarifa:</label>
+                            </div>                            
+                                
+                                <div class="col-sm-10">
+                                    <select class="custom-select" id="cmbTarifaComunidad">
+                                        <option value="NINGUNO">NINGUNO</option>
+                                        <option value="ISR">ISR</option>
+                                        <option value="SOBREPRECIO">SOBREPRECIO</option>                                    
+                                    </select>       
+                                </div>
+                                <div class="col-sm-2">
+                                    <button type="button" onclick="AgregarTarifaComunidad();"  
+                                        class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="col-sm-12 text-center"> 
+                                    <table class="table table-stripped table-bordered table-responsive table-sm w100">
+                                        <thead>
+                                            <th style="width:80%;" class="th-sm">Tarifa</th>
+                                            <th style="width:20%;"  class="th-sm">
+                                                
+                                            </th>
+                                        </thead>
+                                        <tbody id="tblTarifaComunidad">
+
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                                                        
+                            
+                        </div>                                               
+                    </form>
+                    <!--<button type="button" style="background-color:#28a745" class="btn btn-success">Success</button>
+                        <button type="button" style="background-color:#7E9D2F" class="btn btn-primary">Primary</button>
+                        <button type="button" style="background-color:#7E2F9E" class="btn btn-secondary">Secondary</button>
+                        <button type="button" style="background-color:#3C0852" class="btn btn-info">Info</button>
+                        <button type="button" style="background-color:#3F5210" class="btn btn-warning">Warning</button>
+                        <button type="button"  class="btn btn-danger">Danger</button>-->
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-danger" id="cerrarModal" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success" id="guardar">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade top" id="modalProducto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-top" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title w-100 text-center" id="myModalLabel">Tarifa Producto</h4>
+                <button type="button" class="close" id="cerrarModal" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body justify-content-center">
+                <form class="needs-validation">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label for="cmbTarifaProducto">Tarifa:</label>
+                        </div>                            
+                            
+                            <div class="col-sm-10">
+                                <select class="custom-select" id="cmbTarifaProducto">
+                                    <option value="NINGUNO">NINGUNO</option>
+                                    <option value="ISR">ISR</option>
+                                    <option value="SOBREPRECIO">SOBREPRECIO</option>                                    
+                                </select>       
+                            </div>
+                            <div class="col-sm-2">
+                                <button type="button" onclick="AgregarTarifaProducto();"  
+                                    class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="col-sm-12 text-center"> 
+                                <table class="table table-stripped table-bordered table-responsive table-sm w100">
+                                    <thead>
+                                        <th style="width:80%;" class="th-sm">Tarifa</th>
+                                        <th style="width:20%;"  class="th-sm">
+                                            
+                                        </th>
+                                    </thead>
+                                    <tbody id="tblTarifaProducto">
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                                                    
+                        
+                    </div>                                               
+                </form>            
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-danger" id="cerrarModal" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success" id="guardar">Guardar</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="modal fade top" id="modalTipoAfiliado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-top" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title w-100 text-center" id="myModalLabel">Tarifa Tipo Afiliado</h4>
+                <button type="button" class="close" id="cerrarModal" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body justify-content-center">
+                <form class="needs-validation">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label for="cmbTarifaTipoAfiliado">Tarifa:</label>
+                        </div>                            
+                            
+                            <div class="col-sm-10">
+                                <select class="custom-select" id="cmbTarifaTipoAfiliado">
+                                    <option value="NINGUNO">NINGUNO</option>
+                                    <option value="ISR">ISR</option>
+                                    <option value="SOBREPRECIO">SOBREPRECIO</option>                                    
+                                </select>       
+                            </div>
+                            <div class="col-sm-2">
+                                <button type="button" onclick="AgregarTarifaTipoAfiliado();"  
+                                    class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                            <div class="col-sm-12 text-center"> 
+                                <table class="table table-stripped table-bordered table-responsive table-sm w100">
+                                    <thead>
+                                        <th style="width:80%;" class="th-sm">Tarifa</th>
+                                        <th style="width:20%;"  class="th-sm">
+                                            
+                                        </th>
+                                    </thead>
+                                    <tbody id="tblTarifaTipoAfiliado">
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                                                    
+                        
+                    </div>                                               
+                </form>
+                <!--<button type="button" style="background-color:#28a745" class="btn btn-success">Success</button>
+                    <button type="button" style="background-color:#7E9D2F" class="btn btn-primary">Primary</button>
+                    <button type="button" style="background-color:#7E2F9E" class="btn btn-secondary">Secondary</button>
+                    <button type="button" style="background-color:#3C0852" class="btn btn-info">Info</button>
+                    <button type="button" style="background-color:#3F5210" class="btn btn-warning">Warning</button>
+                    <button type="button"  class="btn btn-danger">Danger</button>-->
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-danger" id="cerrarModal" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-success" id="guardar">Guardar</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+
+</body>
+
+</html>

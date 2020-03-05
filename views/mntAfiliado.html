@@ -100,7 +100,8 @@
                                         <i class="fas fa-edit"></i>
                                     </button>
                                     <button type="button"
-                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                        data-toggle="modal" data-target="#modalEliminar">
                                         <i class="fas fa-minus-circle"></i>
                                     </button>
                                 </td>
@@ -124,7 +125,8 @@
                                         <i class="fas fa-edit"></i>
                                     </button>
                                     <button type="button"
-                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                        data-toggle="modal" data-target="#modalEliminar">
                                         <i class="fas fa-minus-circle"></i>
                                     </button>
                                 </td>
@@ -148,7 +150,8 @@
                                         <i class="fas fa-edit"></i>
                                     </button>
                                     <button type="button"
-                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                        data-toggle="modal" data-target="#modalEliminar">
                                         <i class="fas fa-minus-circle"></i>
                                     </button>
                                 </td>
@@ -171,7 +174,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title w-100 text-center" id="myModalLabel">Nuevo Afiliado</h4>
-                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal" aria-label="Cerrar">
+                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal"
+                        aria-label="Cerrar">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -235,73 +239,96 @@
         </div>
     </div>
     <div class="modal fade top" id="modalVista" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-top" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title w-100 text-center" id="myModalLabel">Tarifa</h4>
-                <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal" aria-label="Cerrar">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body justify-content-center">
-                <form class="needs-validation">
-                    <div class="form-row">
-                        <div class="form-group col-5">
-                            <label for="txtCodigo">Código:</label>
-                            <input type="text" class="form-control" id="txtCodigo">
-                        </div>
-                        <div class="form-group col-7">
-                            <label for="txtDpi">DPI:</label>
-                            <input type="text" class="form-control" id="txtDpi">
-                        </div>
-
-                    </div>
-                    <div class="form-group">
-                        <label for="txtNombre">Nombre:</label>
-                        <input type="text" class="form-control" id="txtNombre">
-                    </div>
-                    <div class="form-group">
-                        <label for="txtDireccion">Dirección:</label>
-                        <input type="text" class="form-control" id="txtDireccion">
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-5">
-                            <label for="txtNit">NIT:</label>
-                            <input type="text" class="form-control" id="txtNit">
-                        </div>
-
-                        <div class="form-group col-7 dtpicker input-append date">
-                            <label for="txtFechaIngreso">Fecha ingreso:</label>
-                            <div class="input-group date" data-date="" data-date-format="yyyy mm dd"
-                                data-link-field="txtFechaIngreso" data-link-format="yyyy-mm-dd">
-                                <input class="form-control" size="16" type="text" value="" id="txtFechaIngreso">
-                                <span class="input-group-text input-group-addon" id="remove">
-                                    <span class="add-on fas fa-times"></span>
-                                </span>
-                                <span class="input-group-text input-group-addon" id="show">
-                                    <span class="add-on fas fa-calendar"></span>
-                                </span>
+        aria-hidden="true">
+        <div class="modal-dialog modal-top" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Afiliado</h4>
+                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body justify-content-center">
+                    <form class="needs-validation">
+                        <div class="form-row">
+                            <div class="form-group col-5">
+                                <label for="txtCodigo">Código:</label>
+                                <input type="text" class="form-control" id="txtCodigo">
                             </div>
-                            <input type="hidden" id="hdnFechaIngreso" value="" /><br />
+                            <div class="form-group col-7">
+                                <label for="txtDpi">DPI:</label>
+                                <input type="text" class="form-control" id="txtDpi">
+                            </div>
 
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="txtNombre">Nombre:</label>
+                            <input type="text" class="form-control" id="txtNombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtDireccion">Dirección:</label>
+                            <input type="text" class="form-control" id="txtDireccion">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-5">
+                                <label for="txtNit">NIT:</label>
+                                <input type="text" class="form-control" id="txtNit">
+                            </div>
 
-                </form>
-                <!--<button type="button" style="background-color:#28a745" class="btn btn-success">Success</button>
+                            <div class="form-group col-7 dtpicker input-append date">
+                                <label for="txtFechaIngreso">Fecha ingreso:</label>
+                                <div class="input-group date" data-date="" data-date-format="yyyy mm dd"
+                                    data-link-field="txtFechaIngreso" data-link-format="yyyy-mm-dd">
+                                    <input class="form-control" size="16" type="text" value="" id="txtFechaIngreso">
+                                    <span class="input-group-text input-group-addon" id="remove">
+                                        <span class="add-on fas fa-times"></span>
+                                    </span>
+                                    <span class="input-group-text input-group-addon" id="show">
+                                        <span class="add-on fas fa-calendar"></span>
+                                    </span>
+                                </div>
+                                <input type="hidden" id="hdnFechaIngreso" value="" /><br />
+
+                            </div>
+                        </div>
+
+                    </form>
+                    <!--<button type="button" style="background-color:#28a745" class="btn btn-success">Success</button>
                     <button type="button" style="background-color:#7E9D2F" class="btn btn-primary">Primary</button>
                     <button type="button" style="background-color:#7E2F9E" class="btn btn-secondary">Secondary</button>
                     <button type="button" style="background-color:#3C0852" class="btn btn-info">Info</button>
                     <button type="button" style="background-color:#3F5210" class="btn btn-warning">Warning</button>
                     <button type="button"  class="btn btn-danger">Danger</button>-->
-            </div>
-            <div class="modal-footer justify-content-center">
-                <button type="button" class="btn btn-danger cerrarModal" data-dismiss="modal">Cerrar</button>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-danger cerrarModal" data-dismiss="modal">Cerrar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <div class="modal fade top" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-top" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Eliminar Afiliado</h4>
+                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body justify-content-center">
+                    Esta seguro que desea eliminar el registro?
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-danger cerrarModal" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="guardar">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript">
         //datapicket
         $("#txtFechaIngreso").datetimepicker({

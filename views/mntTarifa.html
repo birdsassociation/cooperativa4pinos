@@ -102,7 +102,8 @@
                                         <i class="fas fa-edit"></i>
                                     </button>
                                     <button type="button"
-                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                        data-toggle="modal" data-target="#modalEliminar">
                                         <i class="fas fa-minus-circle"></i>
                                     </button>
                                 </td>
@@ -126,7 +127,8 @@
                                         <i class="fas fa-edit"></i>
                                     </button>
                                     <button type="button"
-                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                        data-toggle="modal" data-target="#modalEliminar">
                                         <i class="fas fa-minus-circle"></i>
                                     </button>
                                 </td>
@@ -150,7 +152,8 @@
                                         <i class="fas fa-edit"></i>
                                     </button>
                                     <button type="button"
-                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                        class="btn btn-warning m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                        data-toggle="modal" data-target="#modalEliminar">
                                         <i class="fas fa-minus-circle"></i>
                                     </button>
                                 </td>
@@ -173,7 +176,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title w-100 text-center" id="myModalLabel">Nueva Tarifa</h4>
-                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal" aria-label="Cerrar">
+                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal"
+                        aria-label="Cerrar">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -244,6 +248,28 @@
             </div>
         </div>
     </div>
+    <div class="modal fade top" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-top" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Eliminar Tarifa</h4>
+                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal"
+                        aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body justify-content-center">
+                    Esta seguro que desea eliminar el registro?
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-danger cerrarModal" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" id="guardar">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript">
         //datapicket
         $("#txtFechaInicio").datetimepicker({
@@ -288,7 +314,7 @@
             $("#txtTipoTarifa").val($(this).parents("tr").find("td").eq(2).html());
             $("#txtTarifa").val($(this).parents("tr").find("td").eq(3).html());
             $("#txtFechaInicio").val($(this).parents("tr").find("td").eq(4).html());
-            $("#txtFechaFin").val($(this).parents("tr").find("td").eq(5).html());  
+            $("#txtFechaFin").val($(this).parents("tr").find("td").eq(5).html());
         })
 
         //modal

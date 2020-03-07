@@ -269,9 +269,9 @@
         aria-hidden="true">
         <div class="modal-dialog modal-top" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Afiliado</h4>
-                    <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal"
+                <div class="modal-header bg-primary text-white">
+                    <h4 class="modal-title w-100 text-center font-weight-bold" id="myModalLabel">Afiliado</h4>
+                    <button type="button" class="close cerrarModal text-white" id="cerrarModal" data-dismiss="modal"
                         aria-label="Cerrar">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -280,44 +280,115 @@
                     <form class="needs-validation">
                         <div class="form-row">
                             <div class="form-group col-5">
-                                <label for="txtCodigo">Código:</label>
-                                <input type="text" class="form-control" id="txtCodigo">
+                                <label class="font-weight-bold">Código:</label>
+                                <label id="lblCodigo">0000</label>
                             </div>
                             <div class="form-group col-7">
-                                <label for="txtDpi">DPI:</label>
-                                <input type="text" class="form-control" id="txtDpi">
+                                <label class="font-weight-bold">DPI:</label>
+                                <label id="lblDpi">0000 00000 0000</label>
                             </div>
-
                         </div>
                         <div class="form-group">
-                            <label for="txtNombre">Nombre:</label>
-                            <input type="text" class="form-control" id="txtNombre">
+                            <label class="font-weight-bold">Nombre:</label>
+                            <label id="lblNombre">Afiliad prueba</label>  
                         </div>
                         <div class="form-group">
-                            <label for="txtDireccion">Dirección:</label>
-                            <input type="text" class="form-control" id="txtDireccion">
+                            <label class="font-weight-bold">Dirección:</label>
+                            <label id="lblDireccion">Dirección prueba</label>   
                         </div>
                         <div class="form-row">
                             <div class="form-group col-5">
-                                <label for="txtNit">NIT:</label>
-                                <input type="text" class="form-control" id="txtNit">
+                                <label class="font-weight-bold">NIT:</label>
+                                <label id="lblNit">000000-0</label>
                             </div>
 
                             <div class="form-group col-7 dtpicker input-append date">
-                                <label for="txtFechaIngreso">Fecha ingreso:</label>
-                                <div class="input-group date" data-date="" data-date-format="yyyy mm dd"
-                                    data-link-field="txtFechaIngreso" data-link-format="yyyy-mm-dd">
-                                    <input class="form-control" size="16" type="text" value="" id="txtFechaIngreso">
-                                    <span class="input-group-text input-group-addon" id="remove">
-                                        <span class="add-on fas fa-times"></span>
-                                    </span>
-                                    <span class="input-group-text input-group-addon" id="show">
-                                        <span class="add-on fas fa-calendar"></span>
-                                    </span>
-                                </div>
-                                <input type="hidden" id="hdnFechaIngreso" value="" /><br />
+                                <label class="font-weight-bold">Fecha ingreso:</label>
+                                <label id="lblFechaIngreso">01/01/1900</label>
 
                             </div>
+                        </div>
+                        <div class="form-row">
+                            <table id="tblEstadoCredito" class="table  table-bordered table-sm text-center" cellspacing="0"
+                            width="100%">
+                            <thead>
+                                <tr>
+                                    <th colspan="5" class="bg-info text-white">
+                                        Resumen Créditos
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th class="th-sm">Crédito
+                                    </th>
+                                    <th class="th-sm">Capital
+                                    </th>
+                                    <th class="th-sm">
+                                    </th>
+                                    <th class="th-sm">Intereses
+                                    </th>
+                                    <th class="th-sm">
+                                    </th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                               
+                                <tr>
+                                    <td>
+                                        Crédito cuatro pinos
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Agrocrédito
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Incobrables
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                    <td>
+                                        0.00
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                            </table>
                         </div>
 
                     </form>

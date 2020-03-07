@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Ejemplo maquetado</title>
+    <title>Crédito</title>
     <!--
      
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">-->
@@ -43,43 +43,35 @@
             </div>
         </a>
         
-        <a href="#Administracion" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Administracion</a>
+        <a href="#Administracion" data-toggle="collapse" aria-expanded="false" class="collapse d-flex justify-content-between">
+            Administracion <i id="icon" class="fas fa-angle-down"></i></a></a>
         <ul class="collapse list-unstyled" id="Administracion">
-            <li>
-                <a href="#">Page 1</a>
-            </li>
-            <li>
-                <a href="#">Page 2</a>
-            </li>
-            <li>
-                <a href="#">Page 3</a>
-            </li>
+            <li><a href="mntProducto.html">Productos</a></li>
+            <li><a href="mntAfiliado.html">Afiliado</a></li>
+            <li><a href="#">Comunidades</a></li>
+            <li><a href="mntCredito.html">Créditos</a></li>
+            <li><a href="mntTarifa.html">Tarifa</a></li>
+            <li><a href="#">Otros</a></li>
         </ul>
 
-        <a href="#Gestiones" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestiones</a>
+        <a href="#Gestiones" data-toggle="collapse" aria-expanded="false" class="collapse d-flex justify-content-between">
+            Gestiones <i class="fas fa-angle-down"></i></a></a>
         <ul class="collapse list-unstyled" id="Gestiones">
-            <li>
-                <a href="#">Page 1</a>
-            </li>
-            <li>
-                <a href="#">Page 2</a>
-            </li>
-            <li>
-                <a href="#">Page 3</a>
-            </li>
+            <li><a href="mntBoleta.html">Boletas</a></li>
+            <li><a href="#">Imprimir Cheque</a></li>
+            <li><a href="#">Generar Contrato</a></li>
+            <li><a href="#">Generar Intereses</a></li>
+            <li><a href="#">Generar Cheques</a></li>
+            <li><a href="#">Proceso de Liquidación</a></li>
+            <li><a href="#">Impresión de Facturas</a></li>
         </ul>
 
-        <a href="#Reportes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Reportes</a>
+        <a href="#Reportes" data-toggle="collapse" aria-expanded="false" class="collapse d-flex justify-content-between">
+            Reportes <i class="fas fa-angle-down"></i></a>
         <ul class="collapse list-unstyled" id="Reportes">
-            <li>
-                <a href="#">Page 1</a>
-            </li>
-            <li>
-                <a href="#">Page 2</a>
-            </li>
-            <li>
-                <a href="#">Page 3</a>
-            </li>
+            <li><a href="#">Estado de Cuenta</a></li>
+            <li><a href="#">Listado Pago Producto Fresco</a></li>
+            <li><a href="#">Resumen de Producción</a></li>
         </ul>     
     </div>
     <div class="content">
@@ -87,7 +79,7 @@
             <div class="jumbotron text-center bg-color bg-cover-jb">
                 <div class="overlay"></div>
                 <div class="container">
-                    <h3>Mantenimiento Creditos</h3>
+                    <h3>Mantenimiento Créditos</h3>
                 </div>
             </div>
             <div class="row">
@@ -154,7 +146,7 @@
                                 <td>2011/04/25</td>
                                 <td>123345678-9</td>
                                 <td>
-                                    <button type="button"
+                                    <button type="button" 
                                         class="btn btn-secondary my-2  m-0 waves-effect px-2 py-1 fa-2x rounded-lg credito"
                                         data-toggle="modal" data-target="#modalArriba">
                                         <i class="fas fa-hand-holding-usd"></i>
@@ -297,10 +289,10 @@
         function limpiarCampos() {
             $("#txtCodigo").val('');
             $("#txtNombre").val('');
-            $("#txtDireccion").val('');
-            $("#txtDpi").val('');
-            $("#txtFechaIngreso").val('');
-            $("#txtNit").val('');
+            $("#txtSolicitudNumero").val('');
+            $("#txtCantidadCapital").val('');
+            $("#txtFechaDocumento").val('');
+            $("#txtCantidadIntereses").val('');
         }
 
     </script>

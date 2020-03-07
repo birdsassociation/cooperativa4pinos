@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Tarifa</title>
+    <title>Boleta</title>
     <!--
      
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">-->
@@ -79,7 +79,7 @@
             <div class="jumbotron text-center bg-color bg-cover-jb">
                 <div class="overlay"></div>
                 <div class="container">
-                    <h3>Mantenimiento Tarifa</h3>
+                    <h3>Boletas</h3>
                 </div>
             </div>
             <div class="row">
@@ -94,37 +94,28 @@
                             <tr>
                                 <th class="th-sm">Código
                                 </th>
-                                <th class="th-sm">Descripción
+                                <th class="th-sm">Afiliado
                                 </th>
-                                <th class="th-sm">Tipo
+                                <th class="th-sm">Fecha ingreso
                                 </th>
-                                <th class="th-sm">Tarifa
-                                </th>
-                                <th class="th-sm">Fecha inicio
-                                </th>
-                                <th class="th-sm">Fecha fin
-                                </th>
-                                <th class="th-sm">Estado
+                                <th class="th-sm">Fecha pago
                                 </th>
                                 <th></th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td id="codigo">9849</td>
-                                <td id="descripcion">Tarifa 1</td>
-                                <td id="tipoTarifa">Impuesto</td>
-                                <td id="tarifa">ISR</td>
-                                <td id="fechaInicio">2020/02/25</td>
-                                <td id="fechaFin">2020/02/26</td>
-                                <td id="estado">Alta</td>
+                                <td>898484899</td>
+                                <td>Afiliado 3</td>
+                                <td>2020/01/03</td>
+                                <td>2020/01/29</td>
                                 <td>
                                     <button type="button"
                                         class="btn btn-secondary my-2  m-0 waves-effect px-2 py-1 fa-2x rounded-lg">
                                         <i class="fas fa-eye"></i>
                                     </button>
-                                    <button type="button"
-                                        class="modificar btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                    <button type="button" id="modificar"
+                                        class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg modificar"
                                         data-toggle="modal" data-target="#modalArriba">
                                         <i class="fas fa-edit"></i>
                                     </button>
@@ -136,20 +127,17 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td id="codigo">8824</td>
-                                <td id="descripcion">Tarifa 2</td>
-                                <td id="tipoTarifa">Descuento</td>
-                                <td id="tarifa">Mayoreo</td>
-                                <td id="fechaInicio">2020/02/26</td>
-                                <td id="fechaFin">2020/02/27</td>
-                                <td id="estado">Alta</td>
+                                <td>298489488</td>
+                                <td>Afiliado 3</td>
+                                <td>2020/01/02</td>
+                                <td>2020/01/30</td>
                                 <td>
                                     <button type="button"
                                         class="btn btn-secondary my-2  m-0 waves-effect px-2 py-1 fa-2x rounded-lg">
                                         <i class="fas fa-eye"></i>
                                     </button>
-                                    <button type="button"
-                                        class="modificar btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                    <button type="button" id="modificar"
+                                        class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg modificar"
                                         data-toggle="modal" data-target="#modalArriba">
                                         <i class="fas fa-edit"></i>
                                     </button>
@@ -161,20 +149,17 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td id="codigo">859589</td>
-                                <td id="descripcion">Tarifa 3</td>
-                                <td id="tipoTarifa">Impuesto</td>
-                                <td id="tarifa">Retraso</td>
-                                <td id="fechaInicio">2020/02/28</td>
-                                <td id="fechaFin">2020/02/29</td>
-                                <td id="estado">Alta</td>
+                                <td>59489498</td>
+                                <td>Afiliado 3</td>
+                                <td>2020/01/01</td>
+                                <td>2020/01/31</td>
                                 <td>
                                     <button type="button"
                                         class="btn btn-secondary my-2  m-0 waves-effect px-2 py-1 fa-2x rounded-lg">
                                         <i class="fas fa-eye"></i>
                                     </button>
-                                    <button type="button"
-                                        class="modificar btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg"
+                                    <button type="button" id="modificar"
+                                        class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg modificar"
                                         data-toggle="modal" data-target="#modalArriba">
                                         <i class="fas fa-edit"></i>
                                     </button>
@@ -202,7 +187,7 @@
         <div class="modal-dialog modal-top" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Nueva Tarifa</h4>
+                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Nueva Boleta</h4>
                     <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal"
                         aria-label="Cerrar">
                         <span aria-hidden="true">&times;</span>
@@ -211,52 +196,84 @@
                 <div class="modal-body justify-content-center">
                     <form class="needs-validation">
                         <div class="form-group">
-                            <label for="txtDescripcion">Descripción:</label>
-                            <input type="text" class="form-control" id="txtDescripcion">
+                            <label for="txtCodigo">Código boleta:</label>
+                            <input type="text" class="form-control" id="txtCodigo">
+                        </div>
+                        <div class="form-group">
+                            <label for="txtAfiliado">Afiliado:</label>
+                            <input type="text" class="form-control" id="txtAfiliado">
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-6">
-                                <label for="txtTarifa">Tarifa:</label>
-                                <input type="text" class="form-control" id="txtTarifa">
+                            <div class="form-group col-6 dtpicker input-append date" style="margin: 0">
+                                <label for="txtFechaIngreso">Fecha ingreso:</label>
+                                <div class="input-group date" data-date="" data-date-format="yyyy mm dd"
+                                    data-link-field="txtFechaIngreso" data-link-format="yyyy-mm-dd">
+                                    <input class="form-control" size="16" type="text" value="" id="txtFechaIngreso">
+                                    <span class="input-group-text input-group-addon" id="removeFechaIngreso">
+                                        <span class="add-on fas fa-times"></span>
+                                    </span>
+                                    <span class="input-group-text input-group-addon" id="showFechaIngreso">
+                                        <span class="add-on fas fa-calendar"></span>
+                                    </span>
+                                </div>
+                                <input type="hidden" id="hdnFechaIngreso" value="" /><br />
+
                             </div>
-                            <div class="form-group col-6">
-                                <label for="txtTipoTarifa">Tipo tarifa:</label>
-                                <select type="text" class="form-control" id="txtTipoTarifa">
-                                    <option>Seleccionar...</option>
-                                    <option value="Impuesto">Impuesto</option>
-                                    <option value="Descuento">Descuento</option>
+                            <div class="form-group col-6 dtpicker input-append date" style="margin: 0">
+                                <label for="txtFechaPago">Fecha pago:</label>
+                                <div class="input-group date" data-date="" data-date-format="yyyy mm dd"
+                                    data-link-field="txtFechaPago" data-link-format="yyyy-mm-dd">
+                                    <input class="form-control" size="16" type="text" value="" id="txtFechaPago">
+                                    <span class="input-group-text input-group-addon" id="removeFechaPago">
+                                        <span class="add-on fas fa-times"></span>
+                                    </span>
+                                    <span class="input-group-text input-group-addon" id="showFechaPago">
+                                        <span class="add-on fas fa-calendar"></span>
+                                    </span>
+                                </div>
+                                <input type="hidden" id="hdnFechaPago" value="" /><br />
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <label for="txtProducto">Producto:</label>
+                                <select class="form-control" id="txtProducto">
+                                    <option>Producto 1</option>
+                                    <option>Producto 2</option>
+                                    <option>Producto 3</option>
+                                    <option>Producto 4</option>
                                 </select>
                             </div>
-
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <label for="txtLbsBrutas">Lbs. brutas:</label>
+                                <input type="text" class="form-control" id="txtLbsBrutas">
+                            </div>
+                            <div class="form-group col-6">
+                                <label for="txtLbsRechazo">Lbs. rechazo:</label>
+                                <input type="text" class="form-control" id="txtLbsRechazo">
+                            </div>
                         </div>
                         <div class="form-row">
-                            <div class="form-group col-6 dtpicker input-append date">
-                                <label for="txtFechaInicio">Fecha inicio:</label>
-                                <div class="input-group date" data-date="" data-date-format="yyyy mm dd"
-                                    data-link-field="txtFechaIngreso" data-link-format="yyyy-mm-dd">
-                                    <input class="form-control" size="16" type="text" value="" id="txtFechaInicio">
-                                    <span class="input-group-text input-group-addon" id="removeInicio">
-                                        <span class="add-on fas fa-times"></span>
-                                    </span>
-                                    <span class="input-group-text input-group-addon" id="showInicio">
-                                        <span class="add-on fas fa-calendar"></span>
-                                    </span>
+                            <div class="form-group col-6">
+                                <label for="txtRechazo">Rechazo:</label>
+                                <div class="input-group mb-2">
+                                    <input type="text" class="form-control" id="txtRechazo">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">%</div>
+                                    </div>
                                 </div>
-                                <input type="hidden" id="hdnFechaInicio" value="" /><br />
+                                
                             </div>
-                            <div class="form-group col-6 dtpicker input-append date">
-                                <label for="txtFechaFin">Fecha fin:</label>
-                                <div class="input-group date" data-date="" data-date-format="yyyy mm dd"
-                                    data-link-field="txtFechaIngreso" data-link-format="yyyy-mm-dd">
-                                    <input class="form-control" size="16" type="text" value="" id="txtFechaFin">
-                                    <span class="input-group-text input-group-addon" id="removeFin">
-                                        <span class="add-on fas fa-times"></span>
-                                    </span>
-                                    <span class="input-group-text input-group-addon" id="showFin">
-                                        <span class="add-on fas fa-calendar"></span>
-                                    </span>
+                            <div class="form-group col-6">
+                                <label for="txtTolerancia">Tolerancia:</label>
+                                <div class="input-group mb-2">
+                                    <input type="text" class="form-control" id="txtTolerancia">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">%</div>
+                                    </div>
                                 </div>
-                                <input type="hidden" id="hdnFechaFin" value="" /><br />
+                               
                             </div>
                         </div>
 
@@ -275,13 +292,14 @@
             </div>
         </div>
     </div>
+
     <div class="modal fade top" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
         aria-hidden="true">
 
         <div class="modal-dialog modal-top" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Eliminar Tarifa</h4>
+                    <h4 class="modal-title w-100 text-center" id="myModalLabel">Eliminar Afiliado</h4>
                     <button type="button" class="close cerrarModal" id="cerrarModal" data-dismiss="modal"
                         aria-label="Cerrar">
                         <span aria-hidden="true">&times;</span>
@@ -299,7 +317,7 @@
     </div>
     <script type="text/javascript">
         //datapicket
-        $("#txtFechaInicio").datetimepicker({
+        $("#txtFechaIngreso").datetimepicker({
             //format: "LT",
             format: 'yyyy-mm-dd',
             forceParse: true,
@@ -310,14 +328,14 @@
             startView: 4,
             minView: 2
         });
-        $("#showInicio").click(function () {
-            $('#txtFechaInicio').datetimepicker('show');
+        $("#showFechaIngreso").click(function () {
+            $('#txtFechaIngreso').datetimepicker('show');
         });
-        $("#removeInicio").click(function () {
-            $("#txtFechaInicio").val('');
+        $("#removeFechaIngreso").click(function () {
+            $("#txtFechaIngreso").val('');
         });
 
-        $("#txtFechaFin").datetimepicker({
+        $("#txtFechaPago").datetimepicker({
             //format: "LT",
             format: 'yyyy-mm-dd',
             forceParse: true,
@@ -328,20 +346,20 @@
             startView: 4,
             minView: 2
         });
-        $("#showFin").click(function () {
-            $('#txtFechaFin').datetimepicker('show');
+        $("#showFechaPago").click(function () {
+            $('#txtFechaPago').datetimepicker('show');
         });
-        $("#removeFin").click(function () {
-            $("#txtFechaFin").val('');
+        $("#removeFechaPago").click(function () {
+            $("#txtFechaPago").val('');
         });
 
         //modificar
         $(".modificar").click(function () {
-            $("#txtDescripcion").val($(this).parents("tr").find("td").eq(1).html());
-            $("#txtTipoTarifa").val($(this).parents("tr").find("td").eq(2).html());
-            $("#txtTarifa").val($(this).parents("tr").find("td").eq(3).html());
-            $("#txtFechaInicio").val($(this).parents("tr").find("td").eq(4).html());
-            $("#txtFechaFin").val($(this).parents("tr").find("td").eq(5).html());
+            $("#txtCodigo").val($(this).parents("tr").find("td").eq(0).html());
+            $("#txtAfiliado").val($(this).parents("tr").find("td").eq(1).html());
+            $("#txtFechaIngreso").val($(this).parents("tr").find("td").eq(2).html());
+            $("#txtFechaPago").val($(this).parents("tr").find("td").eq(3).html());
+  
         })
 
         //modal
@@ -359,11 +377,14 @@
 
         //funciones
         function limpiarCampos() {
-            $("#txtDescripcion").val('');
-            $("#txtTipoTarifa").val('');
-            $("#txtTarifa").val('');
-            $("#txtFechaInicio").val('');
-            $("#txtFechaFin").val('');
+            $("#txtCodigo").val('');
+            $("#txtAfiliado").val('');
+            $("#txtFechaIngreso").val('');
+            $("#txtFechaPago").val('');
+            $("#txtLbsBrutas").val('');
+            $("#txtLbsRechazo").val('');
+            $("#txtRechazo").val('');
+            $("#txtTolerancia").val('');
         }
 
     </script>

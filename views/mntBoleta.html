@@ -201,7 +201,15 @@
                         </div>
                         <div class="form-group">
                             <label for="txtAfiliado">Afiliado:</label>
-                            <input type="text" class="form-control" id="txtAfiliado">
+                           
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="txtAfiliado">
+                                <button type="button" onclick="validarAfiliado();" id="btnValidarAfiliado"
+                                class="btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg">
+                                <i class="fas fa-check" id="iconValidarAfiliado"></i>
+                                </button>
+                            </div>
+                            
                         </div>
                         <div class="form-row">
                             <div class="form-group col-6 dtpicker input-append date" style="margin: 0">
@@ -385,6 +393,27 @@
             $("#txtLbsRechazo").val('');
             $("#txtRechazo").val('');
             $("#txtTolerancia").val('');
+        }
+        function validarAfiliado()
+        {
+            if(document.getElementById("txtAfiliado").disabled == true)
+            {
+                document.getElementById("txtAfiliado").disabled = false;
+                document.getElementById("txtAfiliado").value = "";
+                document.getElementById("iconValidarAfiliado").className = "fas fa-check";
+                document.getElementById("btnValidarAfiliado").className = 
+                "btn btn-primary m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg";
+            }
+            else 
+            {
+                
+                document.getElementById("txtAfiliado").disabled = true;
+                document.getElementById("txtAfiliado").value = "Afiliado prueba";
+                document.getElementById("iconValidarAfiliado").className = "fas fa-times-circle";
+                document.getElementById("btnValidarAfiliado").className = 
+                "btn btn-danger m-0 waves-effect my-2 px-2 py-1 fa-2x rounded-lg";
+
+            }
         }
 
     </script>

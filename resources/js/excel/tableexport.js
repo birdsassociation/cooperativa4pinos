@@ -284,8 +284,8 @@
                  * @param myClass {String}
                  */
                 function createObjButton(dataObject, myContent, myClass) {
-                    var exportButton = "<button data-fileblob='" + dataObject + "' class='" + bootstrapClass + bootstrapTheme 
-                    + myClass + "'><i class='" + myContent + "'></i></button>";
+                    var exportButton = "<button id='expButton' data-fileblob='" + dataObject + "' class='" + bootstrapClass + bootstrapTheme 
+                    + myClass + "white-text'>"+ myContent+"</button>";
                     checkCaption(exportButton);
                 }
             });
@@ -364,7 +364,7 @@
              */
             xlsx: {
                 defaultClass: "xlsx",
-                buttonContent: "fas fa-file-excel fa-8x green-text",
+                buttonContent: "<i class='fas fa-file-excel fa-lg white-text mr-2'></i>Exportar a Excel",
                 mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
                 fileExtension: ".xlsx"
             },
